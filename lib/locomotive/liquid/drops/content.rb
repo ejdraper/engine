@@ -15,6 +15,9 @@ module Locomotive
           @source.highlighted_field_value
         end
 
+        def id_to_s
+          @source.id.to_s
+        end        
       end
     end
   end
