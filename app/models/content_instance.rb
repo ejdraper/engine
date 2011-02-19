@@ -69,7 +69,7 @@ class ContentInstance
 
   def set_slug
     _alias = self.highlighted_field_alias
-    self._slug = self.send(_alias).parameterize('_')
+    self._slug = self.send(_alias).slugify
   end
 
   def set_visibility
