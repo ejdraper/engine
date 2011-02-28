@@ -73,7 +73,7 @@ module Locomotive
             value = (case field.kind.downcase
             when 'file'     then self.open_sample_asset(value)
             when 'boolean'  then Boolean.set(value)
-            when 'date'     then Date.parse(value)
+            when 'date'     then Date.strptime(value, I18n.t('date.formats.default'))
             else
               value
             end)
